@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ойыншылар</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff6b6b, #0d12a7); 
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+    
+        @keyframes gradientAnimation {
+            0% {
+                background: linear-gradient(135deg, #100101, #f4a261);
+            }
+            50% {
+                background: linear-gradient(135deg, #00c6ff, #d711ca);
+            }
+            100% {
+                background: linear-gradient(135deg, #340260, #09af17);
+            }
+        }
+
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 20px;
+            z-index: 100;
+        }
+
+        .navbar a {
+            color: #fff;
+            font-size: 18px;
+            padding: 12px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ff6b6b;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 50px 20px;
+            text-align: center;
+            flex: 1;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 3.5rem;
+            margin-bottom: 40px;
+            font-weight: bold;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+            animation: textAnimation 2s ease-in-out;
+        }
+
+    
+        @keyframes textAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .player-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .player {
+            width: 250px;
+            height: 350px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            animation: playerFadeIn 1s ease-out;
+        }
+
+    
+        @keyframes playerFadeIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .player img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .player p {
+            margin: 5px 0;
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+            animation: textFadeIn 1s ease-out;
+        }
+
+    
+        @keyframes textFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .player:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+    
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+    
+        @media (max-width: 768px) {
+            .navbar a {
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+            .player-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="https://fcordabasy.kz/ru">Басты бет</a>
+        <a href="https://fcordabasy.kz/ru/about-us">Клуб туралы</a>
+        <a href="https://fcordabasy.kz/ru/blog">Жаңалықтар</a>
+        <a href="команда.html">Команда</a>
+        <a href="https://fcordabasy.kz/ru/games">Жарыстар</a>
+        <a href="https://fcordabasy.kz/ru/contact">Байланыс</a>
+    </div>
+
+
+    <div class="container animate_animated animate_fadeIn">
+        <h1>Ойыншылар</h1>
+        <div class="player-container">
+            
+            <div class="player animate_animated animate_fadeInUp" data-toggle="modal" data-target="#player1Modal">
+                <img src="1.png" alt="Шайзада Бекхан Шайзадаұлы">
+                <p>Шайзада Бекхан Шайзадаұлы</p>
+                <p>Возраст: 25</p>
+            </div>
+            
+            <div class="player animate_animated animate_fadeInUp" data-toggle="modal" data-target="#player2Modal">
+                <img src="2.png" alt="Сергей Игнатович">
+                <p>Сергей Игнатович</p>
+                <p>Возраст: 28</p>
+            </div>
+            
+            <div class="player animate_animated animate_fadeInUp" data-toggle="modal" data-target="#player3Modal">
+                <img src="3.png" alt="Азамат Жомартов">
+                <p>Азамат Жомартов</p>
+                <p>Возраст: 22</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="player1Modal" tabindex="-1" role="dialog" aria-labelledby="player1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="player1ModalLabel">Шайзада Бекхан Шайзадаұлы</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Возраст: 25 лет</p>
+                    <p>Вес: 78 кг</p>
+                    <p>Номер: 1</p>
+                    <p>Рост: 178 см</p>
+                    <p>Дата рождения: 1998 год</p>
+                    <p><a href="https://instagram.com/shaizada_" target="_blank">Instagram</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="player2Modal" tabindex="-1" role="dialog" aria-labelledby="player2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="player2ModalLabel">Сергей Игнатович</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Возраст: 28 лет</p>
+                    <p>Вес: 80 кг</p>
+                    <p>Номер: 2</p>
+                    <p>Рост: 180 см</p>
+                    <p>Дата рождения: 1995 год</p>
+                    <p><a href="https://instagram.com/sergey_ignatovich" target="_blank">Instagram</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="player3Modal" tabindex="-1" role="dialog" aria-labelledby="player3ModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="player3ModalLabel">Азамат Жомартов</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Возраст: 22 года</p>
+                    <p>Вес: 78 кг</p>
+                    <p>Номер: 3</p>
+                    <p>Рост: 190 см</p>
+                    <p>Дата рождения: 2002 год</p>
+                    <p><a href="https://instagram.com/zhomartov35" target="_blank">Instagram</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>© 2024 Ваш сайт. Все права защищены.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
